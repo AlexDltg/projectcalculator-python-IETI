@@ -7,6 +7,7 @@ seleccion = int(1)
 # bucle general
 while seleccion != 0:
     try:
+        seleccion = int(1)  # inicializacion en bucle, para restaurar el valor original
         # seleccion, en bucle, por si se equivoca el usuario
         while (seleccion <= 1) or (seleccion >= 7):
             print("Menu:")
@@ -15,7 +16,7 @@ while seleccion != 0:
             print("3-> MULTIPLICACION")
             print("4-> POTENCIA")
             print("5-> RAIZ QUADRADA")
-            print("6-> LOGARITMO")
+            print("6-> LOGARITMO(base10)")
             print("7-> TRIGONOMETRIA")
             print("0-> Cerrar Calculadora")
             seleccion = int(input())
@@ -34,7 +35,7 @@ while seleccion != 0:
         elif seleccion == 5:
             print("Has seleccionado: RAIZ QUADRADA")
         elif seleccion == 6:
-            print("Has seleccionado: LOGARITMO")
+            print("Has seleccionado: LOGARITMO(base10)")
         elif seleccion == 7:
             print("Has seleccionado: TRIGONOMETRIA")
 
@@ -64,9 +65,8 @@ while seleccion != 0:
             print(math.sqrt(num1))
 
         elif seleccion == 6:  # logaritmo
-            num1 = float(input())
-            num2 = float(input())
-            print(math.log(num1[num2]))
+            num = int(input())
+            print(math.log10(num))
 
         elif seleccion == 7:  # trigonometria
             selec = float(input(" 1 -> seno // 2 -> coseno // 3 -> tangente: "))
